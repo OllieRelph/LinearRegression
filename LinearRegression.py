@@ -2,6 +2,7 @@
 from sklearn import linear_model, metrics
 import matplotlib.pyplot as plt
 import numpy as np
+import random
 
 
     
@@ -28,8 +29,8 @@ def linear_regression(y_data, variance):
     linreg = linear_model.LinearRegression()
     linreg.fit(x_train.reshape(-1,1), y_train)
     y_prediction = linreg.predict(x_test.reshape(-1,1))
-    MSE = sklearn.metrics.mean_squared_error(y_test,y_prediction)
-    r2score = sklearn.metrics.r2_score(y_test,y_prediction)
+    MSE = metrics.mean_squared_error(y_test,y_prediction)
+    r2score = metrics.r2_score(y_test,y_prediction)
     
     
     
